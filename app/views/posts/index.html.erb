@@ -1,0 +1,10 @@
+<h1>Bezerker Beer Blog</h1>
+<br/>
+<% if @posts.count > 0 %>
+  <% @posts.each do |post| %>
+    <h2><%= link_to post.title, show_post_path(id: post.id) %></h2>
+    <h4><%= truncate post.content, length: 50 %></h4>
+  <% end %>
+<% else %>
+  <h2>There aren't any posts yet</h2>
+<% end %>
