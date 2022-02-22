@@ -1,3 +1,15 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content%></p>
-<%= link_to 'Back to Home', root_path %>
+<div class="row">
+    <div class="col-8 px-4">
+      <h1><%= @post.title %></h1>
+      <p><%= raw(@post.content)%></p>
+    </div>
+    <div class="col-4 px-4">
+      <% if @post.image.present? %>
+        <%= image_tag @post.image.variant(resize: "500x500") %>
+      <% else %>
+        <%= image_tag 'default.png', style: 'height:500px; width:500px; padding:16px;' %>
+      <% end %>
+    </div>
+    <div class ="row px-4">
+    <p><%= link_to 'Back to Home', root_path %></p>
+    </div>

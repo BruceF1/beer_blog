@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BezerkerBlog</title>
+    <title>Berserker Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,8 @@
 
   <body>
     <!-- add notice and alert here -->
+    <%= render 'posts/navbar' %>
     <%= yield %>
+    <%= render 'posts/footer' %>
   </body>
 </html>
