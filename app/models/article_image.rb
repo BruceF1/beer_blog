@@ -1,3 +1,3 @@
 class ArticleImage < ApplicationRecord
-  has_one_attached :image, :dependant => :destroy
+  has_one_attached :image, :dependent => :destroy
 end
